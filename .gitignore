@@ -1,13 +1,5 @@
-.gradle/
-build/
-local.properties
+# Flutter app ignores live in app/.gitignore, app/android/.gitignore and app/ios/.gitignore.
 .idea/
 *.iml
-.kotlin/
-
-# iOS
-ios/DaikinRemote.xcodeproj/
-ios/DaikinRemote/Info.plist
-ios/DaikinCore/.build/
 .DS_Store
-xcuserdata/
+local.properties

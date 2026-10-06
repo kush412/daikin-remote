@@ -1,11 +1,10 @@
 Daikin Remote
 
-The Daikin IR protocol encoders in android/app/src/main/java/vn/cake/daikinremote/protocol/ (Android) and
-ios/DaikinCore/Sources/DaikinCore/ (iOS) are Kotlin and Swift ports of the byte layouts, timings
-and checksums from IRremoteESP8266
+The Daikin IR protocol encoders in app/lib/protocol/ are a Dart port of the byte layouts,
+timings and checksums from IRremoteESP8266
 (https://github.com/crankyoldgit/IRremoteESP8266, src/ir_Daikin.cpp / ir_Daikin.h),
 Copyright 2016-2022 sillyfrog, crankyoldgit, pasna and contributors, licensed under the
-GNU Lesser General Public License v2.1. Test vectors in android/app/src/test/ and
-ios/DaikinCore/Tests/ come from that project's test/ir_Daikin_test.cpp.
+GNU Lesser General Public License v2.1. Test vectors in app/test/ come from that
+project's test/ir_Daikin_test.cpp.
 
 The IR bridge firmware in firmware/daikin-ir-bridge/ links IRremoteESP8266 (LGPL v2.1).
