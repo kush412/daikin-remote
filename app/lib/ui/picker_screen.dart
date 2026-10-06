@@ -55,6 +55,8 @@ class PickerScreen extends StatelessWidget {
   }
 }
 
+final _tight = ButtonStyle(padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 8)));
+
 class _ProtocolCard extends StatelessWidget {
   const _ProtocolCard({required this.c, required this.p, required this.current, required this.cs});
   final RemoteController c;
@@ -83,17 +85,20 @@ class _ProtocolCard extends StatelessWidget {
                 Expanded(
                   child: FilledButton.tonal(
                     onPressed: tap(() => c.test(p, power: true)),
-                    child: const Text('Test ON', maxLines: 1),
+                    style: _tight,
+                    child: const FitLabel('Test ON'),
                   ),
                 ),
                 Expanded(
                   child: OutlinedButton(
                     onPressed: tap(() => c.test(p, power: false)),
-                    child: const Text('Test OFF', maxLines: 1),
+                    style: _tight,
+                    child: const FitLabel('Test OFF'),
                   ),
                 ),
                 Expanded(
-                  child: FilledButton(onPressed: () => c.choose(p), child: const Text('Use this', maxLines: 1)),
+                  child: FilledButton(onPressed: () => c.choose(p), style: _tight,
+                    child: const FitLabel('Use this')),
                 ),
               ],
             ),

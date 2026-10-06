@@ -91,3 +91,13 @@ class ConnectionButton extends StatelessWidget {
     );
   }
 }
+
+/// One-line button label that shrinks to fit instead of wrapping (large system font sizes).
+class FitLabel extends StatelessWidget {
+  const FitLabel(this.text, {super.key});
+  final String text;
+
+  @override
+  Widget build(BuildContext context) =>
+      FittedBox(fit: BoxFit.scaleDown, child: Text(text, maxLines: 1, softWrap: false));
+}

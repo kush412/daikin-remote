@@ -310,12 +310,12 @@ class _Choices<T> extends StatelessWidget {
                   ? FilledButton(
                       onPressed: () => onSelect(o),
                       style: FilledButton.styleFrom(padding: EdgeInsets.zero),
-                      child: Text(label(o), maxLines: 1),
+                      child: FitLabel(label(o)),
                     )
                   : OutlinedButton(
                       onPressed: () => onSelect(o),
                       style: OutlinedButton.styleFrom(padding: EdgeInsets.zero),
-                      child: Text(label(o), maxLines: 1),
+                      child: FitLabel(label(o)),
                     ),
             ),
         ],
@@ -330,8 +330,8 @@ class _Toggle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => on
-      ? FilledButton(onPressed: onPressed, child: Text(label))
-      : OutlinedButton(onPressed: onPressed, child: Text(label));
+      ? FilledButton(onPressed: onPressed, child: FitLabel(label))
+      : OutlinedButton(onPressed: onPressed, child: FitLabel(label));
 }
 
 /// Auto / Quiet buttons plus five ascending bars like a signal meter: bars up to the chosen
@@ -410,7 +410,7 @@ class _TimerButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Column(
         children: [
-          Text(at == null ? '$label timer' : '$label at ${clockText(context, at)}', maxLines: 1),
+          FitLabel(at == null ? '$label timer' : '$label at ${clockText(context, at)}'),
           Text(at == null ? 'not set' : countdown(at, c.now), style: Theme.of(context).textTheme.labelSmall),
         ],
       ),
