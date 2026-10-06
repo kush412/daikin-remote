@@ -1,0 +1,13 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.kotlin/
+
+# iOS
+ios/DaikinRemote.xcodeproj/
+ios/DaikinRemote/Info.plist
+ios/DaikinCore/.build/
+.DS_Store
+xcuserdata/
